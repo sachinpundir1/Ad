@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>all</title>
+
+    <style>
+        .container{
+            margin: 4rem;
+        }
+        .container > div{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;                        
+        }
+        .linkto{
+            margin: 1rem;
+            background: rgb(17, 255, 235);                        
+            text-decoration: none;       
+            font-size: 1.6rem;   
+            padding: 1rem 5rem;
+            border-radius: .5rem;
+            color: black;
+        }
+                
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <a class="linkto">
+                <label>Dec 25</label>
+            </a>
+            <a class="linkto">
+                <label>Dec 28</label>
+            </a>
+            <a class="linkto">
+                <label>Drive</label>
+            </a>
+            <a class="linkto">
+                <label>Jan 2 T</label>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // let btns = document.getElementsByClassName('btn');
+        let links = document.getElementsByClassName('linkto');
+
+        for(let i = 0; i < links.length; i++){
+            let label = links[i].childNodes[1];
+            links[i].href = label.innerText;
+        }
+    </script>
+</body>
+</html>

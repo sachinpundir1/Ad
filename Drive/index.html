@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Drive</title>
+        <link rel="shortcut icon" type="image/png" href="./images/drive.png" />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+
+        
+        <link rel="stylesheet" type="text/css" href="index.css" />
+    </head>
+    <body>
+        <nav>
+            <div class="nav__left--div">
+                <div>
+                    <img src="./images/drive.png" />
+                    <label>Drive</label>
+                </div>
+
+                <div class="nav__search">
+                    <span class="material-icons"> search </span>
+                    <input type="search" placeholder="search in Drive" />
+                    <span class="material-icons"> tune </span>
+                </div>
+            </div>
+
+            <div class="nav__right--div">
+                <div>
+                    <span class="material-icons"> help_outline </span>
+                    <span class="material-icons"> settings </span>
+                </div>
+
+                <div>
+                    <span class="material-icons"> apps </span>
+                    <span class="material-icons"> person_pin </span>
+                </div>
+            </div>
+        </nav>
+
+        <section class="content">
+            <aside class="left_side_content">
+
+                <div class="content__left-header">
+                    <span class="material-icons">
+                        add
+                        </span>
+                        <label>New</label>
+                </div>
+
+                <div class="left__content">
+                   
+                    <div>
+                        <label>My Drive</label>
+                    </div>
+
+                    <div>
+                        <label>Computers</label>
+                    </div>
+
+                    <div>
+                        <label>Shared with me</label>
+                    </div>
+
+                    <div>
+                        <label>Recent</label>
+                    </div>
+
+                    <div>
+                        <label>Starred</label>
+                    </div>
+
+                    <div>
+                        <label>Trash</label>
+                    </div>
+                </div>
+
+                <!-- <div>
+                    Storage(70% full)
+                    some bar
+                    some details
+
+                    <button>Buy storage</button>
+                </div> -->
+
+            </aside>
+
+            <section class="data--section">
+                <section class="data--section--header">
+                    <div class="data--section--header__left-div">
+                        <label>My Drive</label>
+                        <span class="material-icons"> arrow_drop_down </span>
+                    </div>
+
+                    <div class="data--section--header__right-div">
+                        <span id="list-view" class="material-icons">
+                            list
+                        </span>
+                        <span id="grid-view" class="material-icons">
+                            calendar_view_month
+                        </span>
+                        <span class="material-icons"> info_outline </span>
+                    </div>
+                </section>
+
+                <section class="data--section--folders">
+                    <label> Folders</label>
+
+                    <div id="user_folders" class="folders--container">
+                        <div class="folder__container">
+                            <span class="material-icons">folder</span>
+                            <span>Folder Name</span>
+                        </div>
+
+                        <div class="folder__container">
+                            <span class="material-icons">folder</span>
+                            <span>Folder Name</span>
+                        </div>
+
+                        <div class="folder__container">
+                            <span class="material-icons">folder</span>
+                            <span>Folder Name</span>
+                        </div>
+
+                        <div class="folder__container">
+                            <span class="material-icons">folder</span>
+                            <span>Folder Name</span>
+                        </div>
+
+                        <div class="folder__container">
+                            <span class="material-icons">folder</span>
+                            <span>Folder Name</span>
+                        </div>
+
+                        <div class="folder__container">
+                            <span class="material-icons">folder</span>
+                            <span>Folder Name</span>
+                        </div>
+
+                        <div class="folder__container">
+                            <span class="material-icons">folder</span>
+                            <span>Folder Name</span>
+                        </div>
+
+                        <div class="folder__container">
+                            <span class="material-icons">folder</span>
+                            <span>Folder Name</span>
+                        </div>
+
+                        <div class="folder__container">
+                            <span class="material-icons">folder</span>
+                            <span>Folder Name</span>
+                        </div>
+
+                        <div class="folder__container">
+                            <span class="material-icons">folder</span>
+                            <span>Folder Name</span>
+                        </div>
+
+                        <div class="folder__container">
+                            <span class="material-icons">folder</span>
+                            <span>Folder Name</span>
+                        </div>
+
+                        <div class="folder__container">
+                            <span class="material-icons">folder</span>
+                            <span>Folder Name</span>
+                        </div>
+
+                        <div class="folder__container">
+                            <span class="material-icons">folder</span>
+                            <span>Folder Name</span>
+                        </div>
+
+                        <div class="folder__container">
+                            <span class="material-icons">folder</span>
+                            <span>Folder Name</span>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <aside class="right__data--content">right side content</aside>
+        </section>
+
+        <script>
+            let listView = document.getElementById("list-view");
+            let folderLayout = document.getElementById("user_folders");
+            let gridView = document.getElementById("grid-view");
+
+            function addEvents(refBtn, btnToDisplay) {
+                refBtn.addEventListener("click", function () {
+                    folderLayout.classList.toggle(
+                        "change--layout--folders--container"
+                    );
+                    this.style.display = "none";
+                    if (refBtn === gridView) {
+                        btnToDisplay.style.display = "initial";
+                    } else if (refBtn === listView) {
+                        btnToDisplay.style.display = "initial";
+                    }
+                });
+            }
+
+            addEvents(gridView, listView);
+            addEvents(listView, gridView);
+        </script>
+    </body>
+</html>

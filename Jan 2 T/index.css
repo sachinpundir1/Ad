@@ -1,0 +1,32 @@
+
+body{
+    margin: 0%;
+    position: relative;
+}
+
+h2{
+    text-align: center;
+    margin: 3rem 0rem;
+}
+
+.gallery{
+    display: flex;
+    justify-content: space-around;
+}
+
+.gallery__img{
+    width: 20rem;    
+}
+
+.gallery__img img{
+    max-width: 100%;
+}
+
+.full_size{
+    position: absolute;    
+    top: -10%;
+    left: 0%;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;    
+}
