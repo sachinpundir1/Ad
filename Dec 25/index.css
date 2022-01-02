@@ -43,7 +43,7 @@ h2{
 
 .courses{
     display: flex;
-    margin: 12rem;    
+    margin: 10rem;    
 }
 
 .card{
@@ -61,6 +61,9 @@ h2{
     height: 9rem;
 }
 
+.course__img img{
+    max-width: 100%;
+}
 .card__title{
     display: flex;
     justify-content: center ;        
@@ -80,4 +83,21 @@ h2{
     border-radius: .5rem;
     outline: none;
     border: none;
+}
+
+@media  all and (max-width : 1200px) {
+    .courses{
+        flex-wrap: wrap;
+    }
+    
+}
+
+@media screen and (max-width : 700px) {
+    .courses{
+        margin: 5vw ;
+    }
+    
+    .card__title{
+        margin-top: 4rem;
+    }
 }
