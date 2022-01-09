@@ -62,23 +62,7 @@ algo.addEventListener('change', function () {
     //xconsole.log(algo.selectedIndex)
     if (algo.selectedIndex === 1) {        
         bubbleSort(a, arr_cont, false);
-    }
-    else if (algo.selectedIndex === 2) {
-        insertion(a, arr_cont);
-    }
-    else if (algo.selectedIndex === 3) {
-        selectionSort(a, arr_cont)
-    }
-    else if (algo.selectedIndex === 4) {
-        cocktail(a, arr_cont)
-    }
-    else if (algo.selectedIndex === 5) {
-        quicksort(a, 0, (a.length - 1), arr_cont);
-    }
-    else if (algo.selectedIndex === 6) {
-        Heapsort(a, a.length)
-    }
-
+    }   
 })
 
 
