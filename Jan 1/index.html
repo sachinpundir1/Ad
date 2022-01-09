@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jan 1</title>
+</head>
+
+<body>
+    <h1>Results in the console</h1>
+    <script>
+        function minOfAll(...arr){
+            let min = arr[0];
+            for(let i = 1; i < arr.length; i++){
+                if(arr[i] < min)
+                    min = arr[i];
+            }
+            return min;
+        }
+
+        console.log('min of all ' ,minOfAll(5,3,5,-8,4,6))
+
+        
+        function isPrime(n){
+            for(let i = 2; i <= Math.floor(n/2) ; i++){
+                if(n % i === 0){
+                    return false;
+                }
+            }
+            console.log(n);
+            return true;
+        }
+
+        Array.prototype.isPrimePresent = function(){                    
+            for(let i = 0; i < this.length; i++){
+                if(isPrime(this[i]))              
+                    return true;
+            }
+            return false;;
+        }
+
+        let arr1 = [4,6,15,72,33]
+
+        console.log('prototype for prime number is present or not in the array', arr1.isPrimePresent());
+
+    </script>
+</body>
+</html>
