@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="index.css" />
+        <title>Lock screeen</title>
+    </head>
+    <body>
+        <div class="container">            
+            <div class="screen"></div>
+            <!-- <button id="one">one</button> -->            
+                <div class="lock__screen">
+                    <div class="lock-screen_info">
+                        <time> </time>
+                        <day></day>
+                        <date></date>
+                    </div>
+
+                    <div class="screen__input">
+                        <input id="pin_input" type="text" placeholder="Enter Pin to unlock   ➡" disabled />
+                        <!-- <label>➡</label> -->
+                    </div>
+
+                    <div class="screen__btns">
+                        <div class="btn">1</div>
+                        <div class="btn">2</div>
+                        <div class="btn">3</div>
+                        <div class="btn">4</div>
+                        <div class="btn">5</div>
+                        <div class="btn">6</div>
+                        <div class="btn">7</div>
+                        <div class="btn">8</div>
+                        <div class="btn">9</div>                        
+                        <div class="btn">0</div>                        
+                    </div>
+                    <label id="cancel">Cancel</label>                    
+                </div>                
+
+                <div class="unlocked__screen">
+                    <h2>Hi There</h2>
+                    <label>
+                        Screen Unlocked
+                    </label>
+                </div>
+                <label id = 'pin'>Pin is 1234</label>
+        </div>
+
+        <script>
+            let time = document.getElementsByTagName("time");
+            let date = document.getElementsByTagName("date");
+            let day = document.getElementsByTagName("day");
+
+            let today = new Date();
+            time[0].innerHTML = today.toLocaleString("en-US", {
+                    hour: "numeric",
+                    minute: "numeric",
+                    hour12: true,
+                });
+            
+            // setInterval(() => {
+            //     time[0].innerHTML = today.toLocaleString("en-US", {
+            //         hour: "numeric",
+            //         minute: "numeric",
+            //         hour12: true,
+            //     });
+            //     console.log('interval',  Date.now())
+            // },1000)           
+
+            var options = { weekday: "long" };
+            date[0].innerHTML = today.toDateString().slice(3);
+            day[0].innerHTML = new Intl.DateTimeFormat("en-US", options).format(
+                today
+            );            
+            
+            setTimeout(() => {                
+                document.getElementsByClassName('lock__screen')[0].classList.toggle('active');
+            }, 300);            
+
+            let pinInput = document.getElementById('pin_input');
+            let btns = document.getElementsByClassName('btn');
+            for(btn of btns){
+                btn.addEventListener('click', function(){
+                    if(pinInput.value.length === 4){
+                        // confirmPin(pinInput.value)
+                        return;
+                    }
+                    console.log(this.innerText)      
+                    if(this.innerText >= '0' && this.innerText <= '9')              
+                    pinInput.value += this.innerText;
+
+                    if(pinInput.value.length === 4){
+                        const isCorrect = confirmPin(pinInput.value);                        
+                    }
+
+                                  
+                })                
+            }     
+            
+            const screenImg = document.getElementsByClassName('screen');            
+
+            const lock__screen =  document.getElementsByClassName('lock__screen')[0];
+console.log(lock__screen)
+            function confirmPin(value){
+                if(value === '1234'){
+                    console.log('unLocked');
+                    lock__screen.classList.toggle('active');
+                    screenImg[0].style.filter = 'blur(0px)';                    
+                    screenImg[0].style.transition = 'all 1s';
+                    
+                    setTimeout(() => {
+                        lock__screen.style.display  = 'none';
+                        const unlocekd_screen = document.getElementsByClassName('unlocked__screen')[0];
+                        unlocekd_screen.style.display = 'initial';
+                    },1000);
+
+                    return true;
+                }
+                else{
+                    alert('pin is incorrect');
+                    return false;
+                }
+            }
+            
+            let cancelBtn = document.getElementById('cancel');
+            cancelBtn.addEventListener('click', function(){
+                pinInput.value = "";
+            })
+        </script>
+    </body>
+</html>

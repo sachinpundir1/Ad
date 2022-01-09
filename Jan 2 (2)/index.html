@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Recursion</title>
+    </head>
+    <body>
+        <section>
+            <h2>Recursion</h2>
+            <input type="text" id="number" />
+            <button type="button" id="submit">Calculate factorial</button>
+            <p id="result"></p>
+        </section>
+        <section>
+            <h2>Fizbuzz App</h2>
+            <input type="text" id="terms" />
+            <button type="button" id="submitFizz">Result</button>
+            <div>
+                <ul id="displayfizzbuzz"></ul>
+            </div>
+        </section>
+
+        <script>
+            let n = document.getElementById("number");
+            let submit = document.getElementById("submit");
+            let result = document.getElementById("result");
+
+            const FizzBuzzNumber = document.getElementById("terms");
+            const submitFizz = document.getElementById("submitFizz");
+            const displayfizzbuzz = document.getElementById("displayfizzbuzz");
+
+            function factorial(n) {
+                if (n <= 1) return 1;
+
+                return n * factorial(n - 1);
+            }
+            submit.addEventListener("click", function () {
+                let res = factorial(parseInt(n.value));
+                result.innerText = res;
+            });
+
+            function fizBuzz(n) {
+                if (n % 3 === 0 && n % 5 === 0) return "FizzBuzz";
+                else if (n % 3 === 0) return "Fizz";
+                else if (n % 5 === 0) return "Buzz";
+                else return n;
+            }
+
+            submitFizz.addEventListener("click", function () {
+                let n = parseInt(FizzBuzzNumber.value);
+                for (let i = 1; i <= n; i++) {
+                    let li = document.createElement("li");
+                    li.innerText = fizBuzz(i);
+                    displayfizzbuzz.appendChild(li);
+                }
+            });
+        </script>
+    </body>
+</html>
