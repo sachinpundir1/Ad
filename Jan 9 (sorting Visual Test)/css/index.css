@@ -1,0 +1,132 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.hd1{
+    background: darkcyan;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;    
+}
+.cont2{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: #444340;
+    
+}
+
+.controls{
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.controls > div>div{
+    width: 15vw;
+    display: flex;
+    align-items: center;
+}
+
+.controls > div{
+    display: flex;
+}
+.controls> *{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: white;
+    line-height: 1.6em;
+}
+
+.lb{
+    font-size: larger;
+    justify-content: center;
+}
+
+.h_lb{    
+    display: flex;
+    justify-content: center;
+    align-items: center;        
+    font-size: 3em;
+    color: white;
+    background:#444340;
+    line-height: 1.6em;
+    /* margin-bottom: 0.5em; */
+    /* margin-top: 0.3em; */
+    padding: 0.13em 0em;
+}
+
+.algos{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    line-height: 1.6em;
+}
+#algos{
+    outline: none;
+    border: none;
+    border-radius: 0.3em;
+    line-height: 1.6em;
+    /* font-size: medium; */
+    padding: 0.1em 1em;
+    background: rgb(255, 255, 255);
+}
+
+
+
+.container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 81.1vh;   
+    
+}
+
+.arr_div {
+    color: #6b5b95;
+    font-size: large;
+    margin: 0.03em;
+    border: 1px solid black;     
+    transition: all 0.1s ease;     
+}
+.slider{
+    -webkit-appearance: none;
+    outline: none;
+    background: tomato;
+    width: 12vw;
+    height: 0.5em;
+    border-radius: 10em;
+
+}
+.slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 1em;
+    height: 1em;
+    border-radius: 20em;
+    background: #fffefe;
+
+}
+.slider::-moz-range-thumb{
+    width: 1em;
+    height: 1em;
+    border-radius: 20em;
+    background: #fffefe;
+}
+.footer{
+    background: #2c193d;
+    color: white;
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;    
+    font-weight: 600;
+
+}

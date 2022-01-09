@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>algo visual</title>
+</head>
+
+<body>
+    <div class="f_container">
+        <div class="h_lb">
+            <label>Sorting visualizer</label>
+        </div>
+        <div class="cont2">
+            <div class="controls">
+
+                <div>
+                    <div class="lb">
+                        <label>Size of Array</label>
+                    </div>
+                    <div>
+                        <input type="range" min="2" max="200" value='5' id="elements" class="slider" value="8">
+
+                    </div>
+                </div>
+
+                <div>
+                    <div class="lb">
+                        <label>Speed</label>
+                    </div>
+                    <div>
+                        <input type="range" min="0" max="1500" value="800" id="speed" class="slider">
+                    </div>
+                </div>
+                <!-- <option/option class="btns" id="new_array">New Array</option> -->
+            </div>
+            <div>
+
+                <div class="algos">
+                    <select id="algos">
+                        <option selected>Select an algorithm</option>
+                        <option class="bns" id="b_sort">Bubble Sort</option>
+                        <option class="bns" id="insertion">Insertion Sort</option>
+                        <option class="bns" id="selection">Selection Sort</option>
+                        <option class="bns" id="cocktail">cocktail Sort</option>
+                        <option class="bns" id="quick">Quick Sort</option>
+                        <option class="bns" id="heapSort">Heap Sort</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="cont1">
+    </div>
+    <div class="container" id="container">
+    </div>
+    <div class="footer">
+        <label>This site works best on Desktop</label>
+    </div>
+</body>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/bubblesort.js"></script>
+<script type="text/javascript" src="js/quicksort.js"></script>
+<script type="text/javascript" src="js/heapsort.js"></script>
+<script type="text/javascript" src="js/insertion.js"></script>
+<script type="text/javascript" src="js/selection.js"></script>
+<script type="text/javascript" src="js/cocktail.js"></script>
+
+</html>
