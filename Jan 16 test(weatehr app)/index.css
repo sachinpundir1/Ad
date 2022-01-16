@@ -1,0 +1,88 @@
+* {
+  margin: 0%;
+  color: white;
+}
+
+.container {
+  background: url(images/1062_15.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+
+.right {
+  float: right;
+  color: white;
+}
+
+.right img {
+  max-width: 1.5rem;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.status {
+  margin-left: 2rem;
+}
+
+.detail--icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.detail--icons img {
+  margin-right: .5rem;
+}
+
+.place--name {
+  position: absolute;
+  bottom: 45vh;
+  width: 20vw;
+}
+
+.weather {
+  background: #0000002b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 20vh;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.weather div {
+  margin: .5rem 1rem;
+  font-size: 1.2rem;
+  padding: .5rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* flex: 1; */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.weather label {
+  font-size: .8rem;
+}
+
+.weather img {
+  max-width: 100%;
+}
+
+.place--name {
+  font-size: 2rem;
+}
+/*# sourceMappingURL=index.css.map */
