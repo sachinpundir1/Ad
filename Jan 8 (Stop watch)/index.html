@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Stop watch</title>
+        <link rel="stylesheet" type="text/css" href="index.css" />
+        <script type="text/javascript" src="index.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="watch__container">
+                <header>Clock</header>
+
+                <div class="timer">
+                    <div class="outer"></div>
+                    <svg height="100" width="100">
+                        <circle
+                            cx="192"
+                            cy="194"
+                            r="140"
+                            stroke="black"
+                            stroke-width="3"
+                            fill="red"
+                        />
+                    </svg>
+                    <label id="__timer">
+                        <label id="hour">00</label>
+                        <label>:</label>
+                        <label id="minutes">00</label>
+                        <label>:</label>
+                        <label id="seconds">00</label>
+                    </label>
+                </div>
+
+                <section class="buttons">
+                    <button id="start-btn">Start</button>
+                    <button id="reset-btn">Reset</button>
+                </section>
+
+                <section class="lap--container"></section>
+            </div>
+        </div>
+    </body>
+</html>

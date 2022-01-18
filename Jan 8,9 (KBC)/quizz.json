@@ -1,0 +1,115 @@
+{
+    "quizz": [
+        {
+            "question": "Which of the following companies get the government's passport project worth $1 Billion?",
+            "options": ["Wipro", "Infosys", "TCS", "HCL"],
+            "correct": "TCS"
+        },
+        {
+            "question": "PM Modi has inaugurated a new campus of Chittaranjan National Cancer Institute (CNCI) in which city?",
+            "options": ["Hyderabad", "Kolkata", "Patna", "Lucknow"],
+            "correct": "Kolkata"
+        },
+        {
+            "question": "Which of the following type of class allows only one object of it to be created?",
+            "options": [
+                "Virtual class",
+                "Abstract class",
+                "Singleton class",
+                "Friend class"
+            ],
+            "correct": "Singleton class"
+        },
+        {
+            "question": "Which of the following is not a type of constructor?",
+            "options": [
+                "Copy constructorz",
+                "Friend constructor",
+                "Default constructor",
+                "Parameterized constructor"
+            ],
+            "correct": "Friend constructor"
+        },
+
+        {
+            "question": "Which of the following statements is correct?",
+            "options": [
+                "Base class pointer cannot point to derived class.",
+                "Derived class pointer cannot point to base class",
+                "Pointer to derived class cannot be created.",
+                "Pointer to base class cannot be created."
+            ],
+            "correct": "Derived class pointer cannot point to base class"
+        },
+        {
+            "question": "Which of the following statement is correct about the references?",
+            "options": [
+                "reference must always be initialized within functions.",
+                "A reference must always be initialized outside all functions.",
+                "A reference must always be initialized.",
+                "Both A and C."
+            ],
+            "correct": "A reference must always be initialized."
+        },
+        {
+            "question": "Which of the following statement is correct?",
+            "options": [
+                "A reference is stored on heap.",
+                "A reference is stored on stack.",
+                "A reference is stored in a queue.",
+                "A reference is stored in a binary tree."
+            ],
+            "correct": "A reference is stored on stack."
+        },
+        {
+            "question": "Which of the following statement is correct?",
+            "options": [
+                "A referenced has to be de-referenced to access a value.",
+                "A referenced does not need to be de-referenced to access a value.",
+                "A referenced has to be double de-referenced to access a value.",
+                "Whether a reference should be de-referenced or not depends on the type of the reference."
+            ],
+            "correct": "A referenced does not need to be de-referenced to access a value."
+        },
+        {
+            "question": "Which of the following is correct about class and structure?",
+            "options": [
+                "class can have member functions while structure cannot.",
+                "class data members are public by default while that of structure are private.",
+                "Pointer to structure or classes cannot be declared.",
+                "class data members are private by default while that of structure are public by default."
+            ],
+            "correct": "class data members are private by default while that of structure are public by default."
+        },
+        {
+            "question": "Which of the following concepts means waiting until runtime to determine which function to call?",
+            "options": [
+                "Data hiding",
+                "Dynamic casting",
+                "Dynamic binding",
+                "Dynamic loading"
+            ],
+            "correct": "Dynamic binding"
+        },
+        {
+            "question": "Which of the following concepts is used to implement late binding?",
+            "options": [
+                "Virtual function",
+                "Operator function",
+                "Const function",
+                "Static function"
+            ],
+            "correct": "Virtual function"
+        },
+        {
+            "question": "Which of the following factors supports the statement that reusability is a desirable feature of a language?",
+            "options": [
+                "It decreases the testing time.",
+                "It lowers the maintenance cost.",
+                "It reduces the compilation time.",
+                "Both A and B."
+            ],
+            "correct": "Both A and B."
+        }
+    ]
+}

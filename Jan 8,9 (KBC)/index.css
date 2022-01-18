@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+* {
+  margin: 0%;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.container {
+  background: linear-gradient(45deg, #310b74, #6c09aa);
+  color: white;
+  height: 100vh;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.line {
+  height: 0.1rem;
+  width: 48.25%;
+  background: rgba(192, 190, 190, 0.5);
+}
+
+.header--content {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  padding: 1rem 3rem;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.content .logo img {
+  max-width: 12rem;
+}
+
+.progress--bar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 4rem;
+}
+
+.progress--bar circle {
+  fill: none;
+  stroke-dasharray: 0;
+  /* try with different values for which value circle will complete */
+  stroke-dashoffset: 257;
+  /* this is which amount of curcle is invisible( errased) */
+  -webkit-transition: stroke-dasharray 1s;
+  transition: stroke-dasharray 1s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+
+.bar__time {
+  color: #ffffff;
+  position: absolute;
+}
+
+.content--img {
+  max-width: 35vw;
+}
+
+.content--img img {
+  max-width: 100%;
+}
+
+.question--price {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  width: 14rem;
+  text-align: left;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.question--price div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: .3rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+
+.questions--container {
+  margin-top: .5rem;
+}
+
+.questions--container div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.question {
+  width: 40rem;
+  padding: .5rem 3rem;
+  line-height: 1.6rem;
+  font-size: 1.2rem;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 1rem;
+}
+
+.question p {
+  width: 100%;
+}
+
+.options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.options div {
+  width: 40%;
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: .5rem;
+}
+
+.options div:hover {
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+}
+
+.options div, .options div * {
+  cursor: pointer;
+}
+/*# sourceMappingURL=index.css.map */

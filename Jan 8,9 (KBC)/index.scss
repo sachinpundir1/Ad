@@ -1,0 +1,144 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+$primary--background:#6c09aa;
+$border--primary--background: rgba(255, 255, 255,.5);
+
+* {
+    margin: 0%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container {
+    background: linear-gradient(45deg, #310b74, $primary--background);
+    color: white;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.line {
+    height: 0.1rem;
+    width: 48.25%;
+    background: rgba(192, 190, 190, 0.5);
+}
+
+.header--content {
+    border: 1px solid $border--primary--background;
+    border-radius: 50%;
+    padding: 1rem 3rem;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    // margin-top: 3rem;
+    padding:  1rem 2rem;
+
+    .logo img {
+        max-width: 12rem;
+    }
+}
+
+.progress--bar {
+    position: relative;
+    // background: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+   
+    circle {
+        fill: none;
+        stroke-dasharray: 0; /* try with different values for which value circle will complete */
+        stroke-dashoffset: 257;                 /* this is which amount of curcle is invisible( errased) */
+        transition: stroke-dasharray 1s;
+        transition-timing-function: linear;
+    }
+}
+
+.bar__time {
+    color: #ffffff;
+    // background: red;
+    position: absolute;
+}
+
+.content--img {
+    max-width: 35vw;
+
+    img {
+        max-width: 100%;
+    }
+}
+
+.question--price {
+    border: 2px solid $border--primary--background;    
+    width: 14rem;    
+    text-align: left;
+    padding: 1rem;
+    border-radius: 1rem;
+
+    div {
+        display: flex;
+        align-items: center;
+        // background: red;
+        margin-top: .3rem;
+        justify-content: space-around;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
+}
+
+.questions--container {
+    // background: red;
+    margin-top: .5rem;
+
+    div {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.question {
+    // background: red;
+    width: 40rem;
+    padding: .5rem 3rem;
+    line-height: 1.6rem;
+    font-size: 1.2rem;
+    text-align: center;
+    border: 1px solid $border--primary--background;
+    border-radius: 1rem;
+    p {
+        width: 100%;
+    }
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    // margin-top: 1rem;
+
+    div {
+        width: 40%;
+        // background: rgb(248, 43, 54);
+        margin-top: 2rem;
+        padding: 0.5rem 1rem;
+        text-align: center;
+        transition: all .2s;
+        border: 2px solid $border--primary--background;
+        border-radius: .5rem;
+    }
+    
+    div:hover{        
+        // filter: drop-shadow(2px 4px 6px black);
+        background: rgba(0,0,0,.2);
+        transform: translateY(-1px);
+    }
+    div, div *{
+        cursor: pointer;
+    }
+}

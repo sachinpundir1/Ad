@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap");
+* {
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  background-color: #dce6f2;
+  margin: 0%;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.watch__container {
+  background-color: #e3edf7;
+  width: 24rem;
+  padding: 2rem 1rem 1rem;
+  border-radius: 2rem;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.watch__container header {
+  font-size: 2rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.7);
+  padding: 0rem 2rem 1rem;
+}
+
+.timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 24rem;
+  position: relative;
+}
+
+.timer svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.timer circle {
+  fill: none;
+  stroke-width: 15;
+  stroke-dasharray: 3;
+  stroke: rgba(0, 0, 0, 0.2);
+}
+
+.timer #__timer {
+  position: absolute;
+  font-size: 2.5rem;
+}
+
+.outer {
+  height: 20rem;
+  width: 20em;
+  border-radius: 50%;
+  -webkit-box-shadow: 13px 11px 17px 9px rgba(0, 0, 0, 0.1), -6px -6px 17px 17px rgba(255, 255, 255, 0.6);
+          box-shadow: 13px 11px 17px 9px rgba(0, 0, 0, 0.1), -6px -6px 17px 17px rgba(255, 255, 255, 0.6);
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.buttons button {
+  background: inherit;
+  width: 9rem;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.6rem 3rem;
+  border: none;
+  outline: none;
+  border-radius: 0.7rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.05rem;
+  -webkit-box-shadow: 6px 6px 9px 2px rgba(0, 0, 0, 0.15), -3px -3px 9px 1px rgba(255, 255, 255, 0.8);
+          box-shadow: 6px 6px 9px 2px rgba(0, 0, 0, 0.15), -3px -3px 9px 1px rgba(255, 255, 255, 0.8);
+}
+
+.buttons :nth-child(2) {
+  color: red;
+}
+
+.buttons :hover {
+  cursor: pointer;
+}
+
+.buttons :active {
+  -webkit-box-shadow: inset 6px 6px 9px 2px rgba(0, 0, 0, 0.15), inset -3px -3px 9px 1px rgba(255, 255, 255, 0.8);
+          box-shadow: inset 6px 6px 9px 2px rgba(0, 0, 0, 0.15), inset -3px -3px 9px 1px rgba(255, 255, 255, 0.8);
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.lap--container {
+  height: 12.5rem;
+  margin-top: 1rem;
+  padding: 0rem 1.5rem;
+  overflow-y: scroll;
+}
+
+.lap--container div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem 0rem;
+  padding: 1.2rem 1rem;
+  border-radius: 1rem;
+  -webkit-box-shadow: 6px 6px 22px -5px rgba(0, 0, 0, 0.3), -2px -1px 6px 5px rgba(255, 255, 255, 0.8);
+          box-shadow: 6px 6px 22px -5px rgba(0, 0, 0, 0.3), -2px -1px 6px 5px rgba(255, 255, 255, 0.8);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.lap--container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.lap--container {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+/*# sourceMappingURL=index.css.map */

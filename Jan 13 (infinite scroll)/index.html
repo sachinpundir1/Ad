@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Infinite scroll</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+
+        <style>
+            .img--container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+                /* height: 30vh;
+                width: 30vw; */
+            }
+            .img--container div {
+                flex: 2;
+            }
+            img {
+                max-width: 30rem;
+                max-height: 20rem;
+            }
+            .loading {
+                text-align: center;
+                margin: 6rem;
+            }
+            .fa-refresh {
+                font-size: 3rem;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Infinite Scroll</h1>
+            <div class="img--container"></div>
+
+            <div class="loading"></div>
+        </div>
+
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+</html>
