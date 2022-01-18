@@ -19,8 +19,9 @@ async function fetchPhotos(page) {
         loading.innerHTML = "";                         // when response recieved from the api clear the loading animation
 
         data.forEach((image) => {
-            renderPhotos(image.links.download);
+            renderPhotos(image.urls.small);
         });
+        console.log(data)
 
     } catch (e) {
         console.log(e);
