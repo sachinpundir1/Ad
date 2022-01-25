@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+
+$nav--background: #ffffff;
+$pseudo--white: #efefef;
+
+@mixin flex($just, $align, $dir: row) {
+    display: flex;
+    flex-direction: $dir;
+
+    @if ($dir == row) {
+        justify-content: $just;
+        align-items: $align;
+    } @else {
+        justify-content: $align;
+        align-items: $just;
+    }
+}
+
+* {
+    margin: 0%;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    background: $pseudo--white;
+}
+
+nav {
+    @include flex(space-between, center);
+
+    background: $nav--background;
+    padding: 0.5rem;
+    position: sticky;
+    top: 0%;
+    z-index: 10;
+}
+
+.brand-box {
+    @include flex(initial, center);
+    // width: 10vw;
+    margin-left: 1.2rem;
+}
+
+.nav--icon img {
+    width: 2rem;
+}
+
+.logo img {
+    // background: yellow;
+    max-width: 8rem;
+    margin-left: 0.6rem;
+    // height  :4rem
+}
+
+.search--bar {
+    @include flex(initial, center);
+    // width: 20vw;
+
+    [type="search"] {
+        width: 35vw;
+        line-height: 1.6rem;
+        font-size: 1rem;
+        padding: 0.5rem 0.8rem;
+        outline: none;
+        border: 1px solid rgba($color: #000000, $alpha: 0.2);
+    }
+}
+
+.search--icon {
+    background: $pseudo--white;
+    padding: 0.55rem 1rem;
+    border: 1px solid rgba($color: #000000, $alpha: 0.2);
+}
+
+.mic--icon {
+    background: $pseudo--white;
+    margin-left: 1rem;
+    padding: 0.4rem;
+    border-radius: 50%;
+    height: 100%;
+}
+
+.search--icon:hover,
+.mic--icon:hover {
+    cursor: pointer;
+}
+
+.search--bar img {
+    @include flex(center, center);
+}
+
+.nav--right {
+    // background: yellow;
+    width: 14rem;
+
+    label {
+        margin-right: 1rem;
+    }
+    label img {
+        width: 1.7rem;
+        stroke-width: 10rem;
+    }
+
+    label:hover {
+        cursor: pointer;
+    }
+}
+
+/* Container styling */
+
+.container {
+    @include flex(initial, initial);
+    position: relative;
+}
+
+.container--left {
+    background: $nav--background;
+    width: 5rem;
+    height: 90vh;
+    position: sticky;
+    top: 3.7rem;
+    // display: none;
+    div {
+        @include flex(center, center, column);
+        height: 5rem;
+
+        label {
+            font-size: 0.7rem;
+        }
+    }
+
+    div:hover {
+        background: $pseudo--white;
+        cursor: pointer;
+    }
+}
+
+.container--left--fullMenu {
+    background: yellow;
+    width: 15rem;
+    height: 25rem;
+    display: none;
+}
+
+.videos--container {
+    width: 100%;
+}
+
+.categories {
+    @include flex(initial, center);
+
+    background: $nav--background;
+    width: 80vw;
+    padding: 0.7rem 1.5rem;
+    border-top: 1px solid rgba($color: #000000, $alpha: 0.1);
+    // overflow-x: scroll;
+    position: sticky;
+    top: 3.7rem;
+
+    label {
+        background: $pseudo--white;
+        padding: 0.3rem 1rem;
+        margin-left: 1rem;
+        border: 1px solid rgba($color: #000000, $alpha: 0.2);
+        border-radius: 1rem;
+    }
+}
+
+.videos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1rem;
+    gap: 1rem;
+    row-gap: 4rem;
+}
+
+.video--card {
+    // background: yellow;
+    img {
+        max-height: 29vh;
+        width: 100%;
+    }
+
+    .video--title {
+        font-size: 1rem;
+        overflow: hidden;
+        height: 2.5rem;
+        padding: 0.5rem 0rem;
+    }
+
+    :hover {
+        cursor: pointer;
+        // background: red;
+    }
+}
+
+.play--video--container {
+    @include flex(initial, initial);
+    display: none;
+    position: relative;
+    // background: yellow;
+    // height: 60vh;
+    width: calc(100vw - 7rem);
+    // transition: all 1s;
+    padding: 1rem;
+}
+
+.player--container--left {
+    // background: red;
+    height: 100%;
+    width: 65%;
+
+    label {
+        position: absolute;
+        font-size: 2rem;
+        padding: 0.5rem 1rem;
+        background: black;
+        z-index: 9;
+        color: white;
+        // left: 56%;3
+        cursor: pointer;
+    }
+
+    label:hover {
+        background: rgb(36, 152, 230);
+    }
+
+    iframe {
+        position: relative;
+        // width: 60vw;
+        width: 100%;
+        height: 70vh;
+    }
+}
+.channel--title {
+    @include flex(space-between, center);
+    // background: yellow;
+    margin: 0.8rem 0rem;
+}
+
+.subscribe {
+    background: red;
+    padding: 0.5rem 1rem;
+    line-height: 1.6rem;
+    color: white;
+    outline: none;
+    border: none;
+}
+.right--player--container {
+    // background: yellow    ;
+    flex: 2;
+    padding-left: 2rem;
+    width: 14rem;
+}
+
+.right--side--videos {
+    .video--card {
+        @include flex(space-around, initial);
+        margin-top: 1rem;
+        padding: 0.5rem 2rem;
+        width: 20rem;
+
+        img {
+            max-width: 8rem;
+        }
+    }
+
+    .video--title {
+        padding: 0%;
+        height: 4rem;
+    }
+}

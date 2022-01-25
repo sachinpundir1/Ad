@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>youtube clone</title>
+        <link rel="stylesheet" href="index.css" />
+        <script src="./index.js" defer></script>
+    </head>
+    <body>
+        <nav>
+            <div class="brand-box">
+                <div class="nav--icon">
+                    <img src="./icons/menu_black_24dp.svg" alt="menu" />
+                </div>
+                <div class="logo">
+                    <img src="./icons/YouTube-Logo.wine.svg" />
+                </div>
+            </div>
+
+            <div class="search--bar">
+                <input type="search" placeholder="Search" />
+                <label class="search--icon">
+                    <img src="./icons/search_black_24dp.svg" />
+                </label>
+                <label class="mic--icon"
+                    ><img src="./icons/mic_black_24dp.svg"
+                /></label>
+            </div>
+
+            <div class="nav--right">
+                <label><img src="./icons/video_call_black_24dp.svg" /></label>
+                <label
+                    ><img src="./icons/apps_black_24dp.svg" alt="apps"
+                /></label>
+                <label
+                    ><img src="./icons/notifications_black_24dp.svg"
+                /></label>
+                <label
+                    ><img
+                        src="./icons/account_circle_black_24dp.svg"
+                        alt="account"
+                /></label>
+            </div>
+        </nav>
+
+        <!--       videos section         -->
+
+        <div class="container">
+            <!-- Left side nav bar -->
+            <aside class="container--left">
+                <div>
+                    <img src="./icons/home_black_24dp.svg" />
+                    <label>Home</label>
+                </div>
+                <div>
+                    <img src="./icons/explore_black_24dp.svg" />
+                    <label>Explore</label>
+                </div>
+                <div>
+                    <img src="./icons/subscriptions_black_24dp.svg" />
+                    <label>Subscription</label>
+                </div>
+                <div>
+                    <img src="./icons/video_library_black_24dp.svg" />
+                    <label>Library</label>
+                </div>
+            </aside>
+            <!-- left side  nav bar  full menu -->
+            <aside class="container--left--fullMenu">full menu</aside>
+
+            <!-- categories (header of videos container) -->
+            <div class="videos--container">
+                <section class="categories">
+                    <label>All</label>
+                    <label>Music</label>
+                    <label>Live</label>
+                    <label>comedy</label>
+                </section>
+
+                <!-- containing the videos  -->
+
+                <div class="videos"></div>
+
+                <div class="play--video--container">
+                    <div class="player--container--left">
+                        <label class="close--player">X</label>
+                        <iframe class="video"></iframe>
+
+                        <div>
+                            <div class="play--title">Title</div>
+                            <div class="description--container">
+                                <div class="channel--title">
+                                    <div class="channel">channer name</div>
+                                    <button class="subscribe">SUBSCRIBE</button>
+                                </div>
+
+                                <div class="description">Description</div>
+                            </div>
+
+                            <div>we may have comments later</div>
+                        </div>
+                    </div>
+
+                    <div class="right--player--container">
+                        <div class="right--side--videos"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

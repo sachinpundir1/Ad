@@ -6,23 +6,22 @@ if (navigator.geolocation) {
         console.log(position);
         lon = position.coords.longitude;
         lat = position.coords.latitude;
-        console.log(lon, lat);       
+        console.log(lon, lat);
         fetchData();
         // console.log('after')
     });
-}
-else{
-    alert('could not get location');
+} else {
+    alert("could not get location");
 }
 
-function renderInfo(data, location) {    
+function renderInfo(data, location) {
     const weeklyWeather = document.querySelectorAll(".weather div");
     const placeName = document.querySelector(".place--name");
     const icons = document.querySelectorAll(".weather img");
 
-    const humidity = document.getElementById('humidity');    
-    const pressure = document.getElementById('pressure');
-    const wind_speed = document.getElementById('wind-speed');
+    const humidity = document.getElementById("humidity");
+    const pressure = document.getElementById("pressure");
+    const wind_speed = document.getElementById("wind-speed");
 
     humidity.innerText = data.current.humidity;
     pressure.innerText = data.current.pressure;
@@ -35,7 +34,6 @@ function renderInfo(data, location) {
         const weatherStatusNode = day.children[3];
         const temperature = data.daily[ind].temp.day;
         const weather = data.daily[ind].weather[0].main;
-
         const iconPath = data.daily[ind].weather[0].icon;
 
         icons[ind].src = `http://openweathermap.org/img/w/${iconPath}.png`;
