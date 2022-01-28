@@ -1,0 +1,44 @@
+@mixin flex($just, $align, $dir: row) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $just;
+  align-items: $align;
+
+  @if ($dir == column) {
+    justify-content: $align;
+    align-items: $just;
+  }
+}
+
+$primary-color: #ffffff;
+$secondry-color: #efefef;
+
+* {
+  margin: 0%;
+}
+.container {
+  height: 100vh
+}
+
+.google-box {
+  @include flex(center, center, column);
+  height: 100%;  
+}
+
+.search-box {
+  @include flex(initial, center);
+//   border: 2px solid black;
+  background: $primary-color;
+  border-radius: 1.5rem;
+  padding: .5rem 1rem;
+  filter: drop-shadow(-2px 1px 3px #c0cfd1);
+  width: 40vw;    
+
+  input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: 1rem;      
+      padding-left: 1rem;
+  }
+}
