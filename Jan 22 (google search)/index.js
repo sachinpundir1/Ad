@@ -1,20 +1,29 @@
 const searchBar = document.getElementById('search-bar');
 
-searchBar.addEventListener('keypress', function(event){
+searchBar.addEventListener('click',function(){
+    const allCookies = document.cookie;
+    console.log('cookies ', allCookies);
+    console.log('clicked');
+} )
+
+searchBar.addEventListener('keypress', function(event){        
     if(event.key === "Enter"){
-        console.log('searched');
+        const query = searchBar.value.trim();
+        setCookieData(query);
+        searchBar.value = '';
     }
 })
 
 
-// set searched data to the cookies
-const setCookieData = () => {
-    
+// set searched data to the cookiesg
+const setCookieData = (query) => {
+    document.cookie = `${query}=${query}`;
+
 }
 
 // get cookies data for suggestions
 const getSuggestions = () => {
-
+    console.log(document.cookie)
 }
 
 
