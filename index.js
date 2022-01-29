@@ -9,5 +9,4 @@ let obj = {
         }, close to Infinity);
     }
 }
-
 obj.fn();
