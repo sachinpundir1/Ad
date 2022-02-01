@@ -1,7 +1,7 @@
 const searchBar = document.getElementById('search-bar');
-
+let allCookies = null;
 searchBar.addEventListener('click',function(){
-    const allCookies = document.cookie;
+     allCookies = document.cookie;
     console.log('cookies ', allCookies);
     console.log('clicked');
 } )
